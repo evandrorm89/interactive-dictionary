@@ -4,7 +4,7 @@ from difflib import get_close_matches
 data = json.load(open("data.json"))
 
 def translate(w):
-	
+	#some conditionals for the user input not to be case-sensitive
 	if w.lower() in data:
 		return data[w.lower()]
 
@@ -30,7 +30,7 @@ def translate(w):
 word = input ("Type a word: ")
 
 output = translate(word)
-
+#in case there is more than one meaning for the word, the output will be a list of those meanings
 if type(output) == list:
 	for i in output:
 		print (i)
