@@ -1,4 +1,5 @@
 import json
+#module to get close matches of a word, in case of a mistype from the user
 from difflib import get_close_matches
 
 data = json.load(open("data.json"))
